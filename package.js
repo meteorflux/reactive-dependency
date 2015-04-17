@@ -1,6 +1,6 @@
 Package.describe({
   name: 'meteorflux:reactive-dependency',
-  version: '0.1.0',
+  version: '0.1.1',
   summary: 'Use reactive dependency injection in Meteor.',
   git: 'https://github.com/meteorflux/reactive-dependency',
   documentation: 'README.md'
