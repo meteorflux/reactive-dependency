@@ -6,11 +6,11 @@ A small package to use reactive dependency injection in Meteor.
 ## Meteor problems:
 
  - When you need to communicate between files in Meteor, you have to create global variables.
- - You can't choose the load order in Meteor. When you project is big you will probably run into problems like trying to use a global variable which hasn't been created yet.
+ - You can't choose the load order in Meteor. When your project is big you will probably run into problems like trying to use a global variable that hasn't been created yet.
 
 ## Reactive solution:
 
-If something is really good in Meteor that is reactivity.
+If something is really good in Meteor, that is reactivity.
 
 With a reactive dependency system:
 
@@ -22,7 +22,7 @@ With a reactive dependency system:
 
 ## Install:
 
-Just write this in your project folder:
+Just run this in your project folder:
 
 ```
 meteor add meteorflux:reactive-dependency
@@ -30,7 +30,7 @@ meteor add meteorflux:reactive-dependency
 
 ## Use:
 
-It's quite similar to Tracker.autorun. Inside your object or class you declare your dependencies like this:
+It's quite similar to [`Tracker.autorun`](http://docs.meteor.com/#/full/tracker_autorun). Inside your object or class you declare your dependencies like this:
 
 ```javascript
 // Dependency Injection
@@ -51,11 +51,11 @@ Dependency.add('OtherObject', otherObject);
 
 Reactivity takes cares of the rest.
 
-## Important!!
+## Important!
 
-Remember that you don't have to access any object before ```Meteor.startup()``` because you don't know if Meteor has already loaded that file or not.
+Remember that you don't have to access any object before `Meteor.startup()` because you don't know if Meteor has already loaded that file or not.
 
-This is not bad, it's how Meteor normally works and the reason of ```Meteor.startup()```.
+This is not bad, it's how Meteor normally works and the reason `Meteor.startup()` exists.
 
 ## MeteorFlux
 
@@ -63,17 +63,17 @@ I have created this package to use in conjunction with my [MeteorFlux Dispatcher
 
 In the [Flux](https://facebook.github.io/flux/) architecture, your logic is kept inside Stores. Those Stores need to communicate between each other so a good **dependency** system is needed.
 
-MeteorFlux is still a work in progress. You can follow it in this forum post:
+MeteorFlux is still a work in progress. You can follow it in this forum post:  
 https://forums.meteor.com/t/meteorflux-flow/920/
 
-You **don't need to use Flux or the Dispatcher** to use this package. Actually, I hope it can be useful in many other cases so I released first.
+You **don't need to use Flux or the Dispatcher** to use this package. Actually, I hope it can be useful in many other cases, so I've released this first.
 
-## Examples:
+## Examples:
 
-I have created an example in this Github repo:
+I have created an example in this Github repo:  
 https://github.com/meteorflux/reactive-dependency-example
 
 ## Contribute:
 
-Feel free to express your feelings in this forum post
-https://forums.meteor.com/t/reactive-dependency-injection/2971 or here in the [Github Issues](https://github.com/meteorflux/reactive-dependency/issues).
+Feel free to express your feelings in [this forum post](https://forums.meteor.com/t/reactive-dependency-injection/2971)
+or here in the [Github Issues](https://github.com/meteorflux/reactive-dependency/issues).
