@@ -8,7 +8,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.use('reactive-dict@1.1.0');
+  api.use([
+    'reactive-dict@1.1.0',
+    'tracker'
+  ]);
   api.export('Dependency', 'client');
   api.addFiles('reactive-dependency.js');
 });
